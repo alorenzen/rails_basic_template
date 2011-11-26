@@ -8,8 +8,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<% flash.each do |key,message| %>
+<%= content_tag(:div, message, :class => "flash #{key}") %>
+<% end %>
 
 <%= yield %>
 
