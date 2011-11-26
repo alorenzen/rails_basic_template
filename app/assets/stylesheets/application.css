@@ -5,3 +5,16 @@
  *= require_self
  *= require_tree . 
 */
+
+.alert {
+  @extend .error
+}
+
+.notice {
+  @extend .success
+}
+
+.flash {
+  white-space: nowrap;
+  width: 200px;
+}
